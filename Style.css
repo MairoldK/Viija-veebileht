@@ -60,24 +60,24 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
+    gap: 1.2rem;
+    margin-top: 1.87rem;
 }
 .filmid_kaart {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 12.5rem;
     background-color: #0B0C10;
-    border-radius: 10px;
+    border-radius: 0.6rem;
     overflow: hidden;
 }
 .film_poster {
     background-color: #1F2833;
-    border-bottom: 3px solid #F4A261;
+    border-bottom: 0.18rem solid #F4A261;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 240px;
+    height: 15rem;
     color: #F5F5F5;
     font-family: "DM Sans", sans-serif;
 }
@@ -86,20 +86,20 @@ img.film_poster {
     object-fit: cover;
 }
 .film_intro {
-    padding: 12px;
+    padding: 0.75rem;
     
 }
 .filmi_pealkiri {
     color: #F4A261;
     font-family: "DM Serif Display", serif;
-    font-size: 18px;
-    margin: 0 0 8px 0;
+    font-size: 1.125rem;
+    margin: 0 0 0.5rem 0;
 }
 .filmi_kirjeldus {
-    font-size: 14px;
+    font-size: 0.875rem;
     margin: 0;
 }
 .film_info {
-    font-size: 13px;
-    margin: 13 0 8px 0;
+    font-size: 0.8125rem;
+    margin: 0.8125rem 0 0.5rem 0;
 }
