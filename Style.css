@@ -57,8 +57,60 @@ p {
     box-sizing: border-box;
     padding: 3rem;
 }
+<<<<<<< HEAD
+=======
+.filmid_grid {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1.87rem;
+}
+.filmid_kaart {
+    display: flex;
+    flex-direction: column;
+    width: 12.5rem;
+    background-color: #0B0C10;
+    border-radius: 0.6rem;
+    overflow: hidden;
+}
+.film_poster {
+    background-color: #1F2833;
+    border-bottom: 0.18rem solid #F4A261;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15rem;
+    color: #F5F5F5;
+    font-family: "DM Sans", sans-serif;
+}
+img.film_poster {
+    width: 100%;
+    object-fit: cover;
+}
+.film_intro {
+    padding: 0.75rem;
+    
+}
+.filmi_pealkiri {
+    color: #F4A261;
+    font-family: "DM Serif Display", serif;
+    font-size: 1.125rem;
+    margin: 0 0 0.5rem 0;
+}
+.filmi_kirjeldus {
+    font-size: 0.875rem;
+    margin: 0;
+}
+.film_info {
+    font-size: 0.8125rem;
+    margin: 0.8125rem 0 0.5rem 0;
+}
+>>>>>>> branch2
 .film_image {
-    width: 40vh;
+    width: 20rem;
+    max-width: 100%;
     height: auto;
     margin-top: 2rem;
 }
