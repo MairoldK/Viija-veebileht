@@ -47,6 +47,7 @@ p {
     gap: 2vw;
     align-items: center;
     box-sizing: border-box;
+    overflow-wrap: break-word;
 }
 .container_column {
     display:flex;
@@ -102,4 +103,15 @@ img.film_poster {
 .film_info {
     font-size: 0.8125rem;
     margin: 0.8125rem 0 0.5rem 0;
+}
+.film_image {
+    width: 20rem;
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
+h2 {
+    color: #F5F5F5;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
