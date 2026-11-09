@@ -1,1 +1,2 @@
 # Viija-veebileht
+Veebilehe eesmärk on tutvustada ja jagada meie lemmikfilme teistega. Lehel on avaleht, filmide nimekiri ning iga filmi kohta eraldi alamleht, kus on kirjas filmi lühikirjeldus, žanr ja meie isiklik arvamus.
