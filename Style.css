@@ -116,3 +116,50 @@ h2 {
     font-family: "DM Sans", sans-serif;
     font-size: clamp(1rem, 2vw, 1.5rem);
 }
+.popup_box {
+  background: #1a222d;
+  color: #ffffff;
+  width: 60%;
+  min-height: 40vh;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  border-radius: 0.7rem;
+  border-top: 0.5rem solid #F4A261;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.invis {
+    display: none;
+}
+#p_img {
+    max-width: 40vh;
+    height: auto;
+}
+h3 {
+    color: #F4A261;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+.popup_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.popup_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 3vh;
+}
