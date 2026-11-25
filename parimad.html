@@ -24,9 +24,26 @@
             <div class="container_column">
             <h1>Parimad filmid</h1>
             
-            <p>Siin on lemmikfilmide loetelu.</p>
+            <div class="parimad_grid"></div>
+            <div id="popup" class="overlay invis">
+            <div class="popup_box">
+                <div class="popup_column">
+                    <h3 id="p_title"></h3>
+                    <h3 id="p_rating"></h3>
+                    </div>
+                <div class="popup_row">
+                    <div class="popup_column">
+                    <h3>Sisu</h3>
+                    <p id="p_description"></p>
+                    <h3>Arvamus</h3>
+                    <p id="p_arvamus"></p>
+                    </div>
+                <img id="p_img" src="" alt="">
+                </div>
+            </div>
             </div>
     </div>
+    <script src="clickable_poster.js"></script>
 </body>
 
 </html>

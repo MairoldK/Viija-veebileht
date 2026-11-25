@@ -8,6 +8,7 @@ const movie_id = {
     rating: "8.8 / 10",
     opinion: "Arvamus",
     img: "fightclub.jpg",
+    parimad: 1,
   },
   hailmary: {
     title: "Hail Mary",
@@ -18,6 +19,7 @@ const movie_id = {
     rating: "8.2 / 10",
     opinion: "Arvamus",
     img: "hailmary.jpg",
+    parimad: 0,
   },
   wallflower: {
     title: "The Perks of Being a Wallflower",
@@ -28,6 +30,7 @@ const movie_id = {
     rating: "7.7 / 10",
     opinion: "Mairold: „See film on suurepärane näide filmist, mis kõnetab inimestega. Filmi sisuga on väga lihtne mingil määral samastuda ja on hea film, kui tahad sügavama mõttega filmi.“",
     img: "The_Perks_of_Being_a_Wallflower_Poster.jpg",
+    parimad: 1,
   },
   walle: {
     title: "Walle-e",
@@ -38,6 +41,7 @@ const movie_id = {
     rating: "8.1 / 10",
     opinion: "Arvamus",
     img: "walle.jpg",
+    parimad: 1,
   },
    whiplash: {
     title: "Whiplash",
@@ -48,6 +52,7 @@ const movie_id = {
     rating: "8.3 / 10",
     opinion: "Mairold: „Film räägib sellest, mis juhtub, kui lasta ambitsioonil ja kinnisideel ennast liiga kaugele viia. Suurepärane film – see väärib auhindu ja rohkemgi.“",
     img: "Whiplash_poster.jpg",
+    parimad: 1,
   },
   interstellar: {
     title: "Interstellar",
@@ -58,6 +63,7 @@ const movie_id = {
     rating: "8.7 / 10",
     opinion: "Mairold: „Film ei ole ainult põneva sisuga meistriteos, vaid kõnetab ka inimestega sügavamal tasandil.“",
     img: "interstellar.jpg",
+    parimad: 0,
   },
   shutterisland: {
     title: "Shutter Island",
@@ -68,6 +74,7 @@ const movie_id = {
     rating: "8.2 / 10",
     opinion: "Mairold: „Sügavamõtteline põnevik, mis paneb sind terve aeg mõtlema.“",
     img: "shutter_island.jpg",
+    parimad: 1,
   },
   treasureplanet: {
     title: "Treasure Planet",
@@ -78,6 +85,7 @@ const movie_id = {
     rating: "7.2 / 10",
     opinion: "Mairold: „Alahinnatud multifilm, mis oli minu lapsepõlve üheks lemmikuks.“",
     img: "treasure_planet.jpg",
+    parimad: 0,
   },
   greenbook: {
     title: "Green Book",
@@ -88,6 +96,7 @@ const movie_id = {
     rating: "8.2 / 10",
     opinion: "Mairold: „Põnev film, mis käsitleb rassismi 20.sajandil USA-s.“",
     img: "green_book.jpg",
+    parimad: 0,
   },
   babydriver: {
     title: "Baby Driver",
@@ -98,6 +107,7 @@ const movie_id = {
     rating: "7.5 / 10",
     opinion: "Mairold: „Huvitava sisuga film põgenemisautojuhist, kes võitleb oma raskustega.“",
     img: "baby_driver.jpg",
+    parimad: 0,
   },
   fordvsferrari: {
     title: "Ford v Ferrari",
@@ -108,6 +118,7 @@ const movie_id = {
     rating: "8.1 / 10",
     opinion: "Mairold: „Uskumatult põnev film tõestisündinud loo põhjal.“",
     img: "ford_vs_ferrari.jpg",
+    parimad: 0,
   },
   deadpool: {
     title: "Deadpool",
@@ -118,6 +129,7 @@ const movie_id = {
     rating: "8.0 / 10",
     opinion: "Mairold: „Musta huumorit täis kangelasfilm, mis rajas tee täiskasvanutele suunatud kangelasfilmidele“",
     img: "deadpool.jpg",
+    parimad: 0,
   },
   obsession: {
     title: "Obsession",
@@ -128,6 +140,7 @@ const movie_id = {
     rating: "7.8 / 10",
     opinion: "Mairold: „Ainulaadne õudusfilm, vähesed filmid oskavad tekitada sellist ebamugavust vaadates kui see film suudab. “",
     img: "obsession.jpg",
+    parimad: 1,
   },
   joker: {
     title: "Joker",
@@ -138,6 +151,7 @@ const movie_id = {
     rating: "8.3 / 10",
     opinion: "Mairold: „Sünge ja mõtlemapanev film, mis näitab kuidas eemaletõugatud ja vaimselt ebastabiilne mees hakkab vaikselt murduma.“",
     img: "joker.jpg",
+    parimad: 0,
   },
 
 };
@@ -149,8 +163,14 @@ const rating = document.getElementById("p_rating");
 const description = document.getElementById("p_description");
 const arvamus = document.getElementById("p_arvamus");
 const image = document.getElementById("p_img");
+const parimad_grid = document.querySelector(".parimad_grid");
+function closepopup(){
+  if (popup) {
+    popup.classList.add("invis");
+  }
+}
 
-Object.entries(movie_id).forEach(([id, movie]) => {
+function Moviekaart(id, movie) {
   const numericRating = movie.rating.split("/")[0].trim();
 
   const card = document.createElement("div");
@@ -175,11 +195,29 @@ Object.entries(movie_id).forEach(([id, movie]) => {
     image.alt = `${movie.title} poster`;
     popup.classList.remove("invis");
   });
-  grid.appendChild(card);
-});
+    return card;
+}
 
-popup.addEventListener("click", (event) => {
-  if (event.target === popup) {
-    popup.classList.add("invis");
+Object.entries(movie_id).forEach(([id, movie]) => {
+  if (grid) {
+    grid.appendChild(Moviekaart(id, movie));
+  }
+  if (parimad_grid && movie.parimad === 1) {
+    parimad_grid.appendChild(Moviekaart(id,movie))
   }
 });
+
+if (popup) {
+  popup.addEventListener("click", (event) => {
+    if (event.target === popup) {
+      closepopup();
+    }
+  });
+}
+if (popup) {
+  document.addEventListener("keydown", (event) => {
+    if (event.key == "Escape") {
+      closepopup();
+    }
+  });
+}
