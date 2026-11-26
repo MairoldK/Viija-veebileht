@@ -171,3 +171,118 @@ h3 {
     gap: 1.2rem;
     margin-top: 1.87rem;
 }
+.avaleht_hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 50vh;
+    background-color: #0B0C10;
+    border-radius: 0.7rem;
+    padding: 3rem;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+        ) ,url(kino.jpg);
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.avaleht_hero h1 {
+    color: #F4A261;
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin: 0;
+}
+.avaleht_hero p {
+    max-width: 35rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.avaleht_nupp {
+    background-color: #F4A261;
+    color: #0B0C10;
+    padding: 0.8rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-family: "DM Sans", sans-serif;
+    margin-top: 1rem;
+    transition: 0.3s;
+}
+.avaleht_nupp:hover {
+    background-color: #F5F5F5
+}
+.meist_intro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+}
+.meist_tekst h1 {
+    color: #F4A261;
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+}
+.meist_tekst p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 35rem;
+}
+.meist_pilt {
+    width: 40%;
+    height: 25rem;
+    border-radius: 0.7rem;
+    object-fit: cover;
+    object-position: center;
+}
+@media (max-width: 768px) {
+    .meist_intro {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .meist_pilt {
+        width: 100%;
+    }
+}
+.meeskond_pealkiri {
+    text-align: center;
+    color: #F4A261;
+    font-family: "DM Serif Display", serif;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+.meeskond_grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.meeskond_kaart {
+    background-color: #0B0C10;
+    border-radius: 0.7rem;
+    border-top: 0.3rem solid #F4A261;
+    padding: 2rem;
+    width: 25rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.meeskond_kaart h3 {
+    font-family: "DM Serif Display", serif;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+.meeskond_kaart hr {
+    border: none;
+    border-top:1px solid #F4A261;
+    margin: 1.5rem 0;
+}
+.meeskond_kaart strong{
+    color: #F4A261;
+}
